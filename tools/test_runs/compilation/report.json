@@ -1,0 +1,499 @@
+{
+  "title": "Six-corpus compilation",
+  "n_rows": 24142,
+  "max_per_group": 3000,
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "datasheet": {
+    "CEAS": {
+      "file": "CEAS_08.csv",
+      "label_filter": null,
+      "class_1": {
+        "n": 21842,
+        "dated_share": 0.9988,
+        "year_min": 1998,
+        "year_max": 2020,
+        "year_p01": 2008,
+        "year_p99": 2008,
+        "top_years": [
+          [
+            2008,
+            21639
+          ],
+          [
+            2007,
+            37
+          ],
+          [
+            2002,
+            32
+          ]
+        ]
+      },
+      "class_0": {
+        "n": 17312,
+        "dated_share": 1.0,
+        "year_min": 2005,
+        "year_max": 2008,
+        "year_p01": 2008,
+        "year_p99": 2008,
+        "top_years": [
+          [
+            2008,
+            17308
+          ],
+          [
+            2005,
+            4
+          ]
+        ]
+      },
+      "licence": "not stated"
+    },
+    "Enron": {
+      "file": "Enron.csv",
+      "label_filter": null,
+      "class_0": {
+        "n": 15791,
+        "dated_share": 0.0,
+        "year_min": null,
+        "year_max": null,
+        "year_p01": null,
+        "year_p99": null,
+        "top_years": []
+      },
+      "class_1": {
+        "n": 13976,
+        "dated_share": 0.0,
+        "year_min": null,
+        "year_max": null,
+        "year_p01": null,
+        "year_p99": null,
+        "top_years": []
+      },
+      "licence": "not stated"
+    },
+    "Ling": {
+      "file": "Ling.csv",
+      "label_filter": null,
+      "class_0": {
+        "n": 2401,
+        "dated_share": 0.0,
+        "year_min": null,
+        "year_max": null,
+        "year_p01": null,
+        "year_p99": null,
+        "top_years": []
+      },
+      "class_1": {
+        "n": 458,
+        "dated_share": 0.0,
+        "year_min": null,
+        "year_max": null,
+        "year_p01": null,
+        "year_p99": null,
+        "top_years": []
+      },
+      "licence": "not stated"
+    },
+    "SpamAssassin": {
+      "file": "SpamAssasin.csv",
+      "label_filter": null,
+      "class_0": {
+        "n": 4091,
+        "dated_share": 1.0,
+        "year_min": 2002,
+        "year_max": 2028,
+        "year_p01": 2002,
+        "year_p99": 2002,
+        "top_years": [
+          [
+            2002,
+            4090
+          ],
+          [
+            2028,
+            1
+          ]
+        ]
+      },
+      "class_1": {
+        "n": 1718,
+        "dated_share": 0.9639,
+        "year_min": 1993,
+        "year_max": 2020,
+        "year_p01": 2001,
+        "year_p99": 2002,
+        "top_years": [
+          [
+            2002,
+            1522
+          ],
+          [
+            2001,
+            123
+          ],
+          [
+            2000,
+            4
+          ]
+        ]
+      },
+      "licence": "not stated"
+    },
+    "Nazario": {
+      "file": "Nazario.csv",
+      "label_filter": null,
+      "class_1": {
+        "n": 1565,
+        "dated_share": 0.9994,
+        "year_min": 2015,
+        "year_max": 2022,
+        "year_p01": 2015,
+        "year_p99": 2022,
+        "top_years": [
+          [
+            2016,
+            373
+          ],
+          [
+            2017,
+            250
+          ],
+          [
+            2018,
+            244
+          ]
+        ]
+      },
+      "licence": "CC BY 4.0"
+    },
+    "Nigerian": {
+      "file": "Nigerian_Fraud.csv",
+      "label_filter": null,
+      "class_1": {
+        "n": 3332,
+        "dated_share": 0.8517,
+        "year_min": 1990,
+        "year_max": 2015,
+        "year_p01": 2001,
+        "year_p99": 2007,
+        "top_years": [
+          [
+            2006,
+            999
+          ],
+          [
+            2005,
+            535
+          ],
+          [
+            2007,
+            429
+          ]
+        ]
+      },
+      "licence": "CC BY-SA 3.0 US (CLAIR source)"
+    }
+  },
+  "alignment": {
+    "purity": {
+      "CEAS": 0.5578,
+      "Enron": 0.5305,
+      "Ling": 0.8398,
+      "Nazario": 1.0,
+      "Nigerian": 1.0,
+      "SpamAssassin": 0.7043
+    },
+    "supervised": {
+      "f1": {
+        "mean": 98.65,
+        "ci95": 0.36,
+        "n": 3
+      },
+      "balanced_accuracy": {
+        "mean": 98.57,
+        "ci95": 0.37,
+        "n": 3
+      }
+    },
+    "source_oracle": {
+      "f1": {
+        "mean": 65.32,
+        "ci95": 0.71,
+        "n": 3
+      },
+      "balanced_accuracy": {
+        "mean": 66.96,
+        "ci95": 0.25,
+        "n": 3
+      }
+    },
+    "label_free": {
+      "f1": {
+        "mean": 66.1,
+        "ci95": 0.34,
+        "n": 3
+      },
+      "balanced_accuracy": {
+        "mean": 67.61,
+        "ci95": 0.94,
+        "n": 3
+      }
+    },
+    "corpus_id_accuracy": {
+      "mean": 94.26,
+      "ci95": 0.18,
+      "n": 3
+    }
+  },
+  "separability": {
+    "class_1": {
+      "sources": [
+        "CEAS",
+        "Enron",
+        "Ling",
+        "Nazario",
+        "Nigerian",
+        "SpamAssassin"
+      ],
+      "chance": 16.67,
+      "accuracy": {
+        "mean": 87.83,
+        "ci95": 1.43,
+        "n": 3
+      },
+      "null_source": "CEAS",
+      "null_accuracy": {
+        "mean": 49.62,
+        "ci95": 3.58,
+        "n": 3
+      }
+    },
+    "class_0": {
+      "sources": [
+        "CEAS",
+        "Enron",
+        "Ling",
+        "SpamAssassin"
+      ],
+      "chance": 25.0,
+      "accuracy": {
+        "mean": 95.15,
+        "ci95": 1.36,
+        "n": 3
+      },
+      "null_source": "CEAS",
+      "null_accuracy": {
+        "mean": 50.88,
+        "ci95": 7.54,
+        "n": 3
+      }
+    }
+  },
+  "date": {
+    "dated_share": 0.6117,
+    "overall": {
+      "n": 14768,
+      "balanced_accuracy": {
+        "mean": 70.88,
+        "ci95": 11.44,
+        "n": 3
+      },
+      "f1": {
+        "mean": 67.73,
+        "ci95": 16.18,
+        "n": 3
+      }
+    },
+    "within_source": {
+      "CEAS": {
+        "n": 5994,
+        "balanced_accuracy": {
+          "mean": 50.17,
+          "ci95": 0.42,
+          "n": 3
+        },
+        "f1": {
+          "mean": 22.42,
+          "ci95": 92.21,
+          "n": 3
+        }
+      },
+      "SpamAssassin": {
+        "n": 4656,
+        "balanced_accuracy": {
+          "mean": 53.62,
+          "ci95": 0.74,
+          "n": 3
+        },
+        "f1": {
+          "mean": 13.49,
+          "ci95": 2.56,
+          "n": 3
+        }
+      }
+    },
+    "year_range_by_class": {
+      "0": [
+        2002,
+        2008
+      ],
+      "1": [
+        2001,
+        2022
+      ]
+    }
+  },
+  "loso": {
+    "CEAS": {
+      "n": 6000,
+      "single_class": false,
+      "flagged_share": 0.5143,
+      "f1": 91.65,
+      "recall": 92.97,
+      "fpr": 9.9
+    },
+    "Enron": {
+      "n": 6000,
+      "single_class": false,
+      "flagged_share": 0.5762,
+      "f1": 84.34,
+      "recall": 90.77,
+      "fpr": 24.47
+    },
+    "Ling": {
+      "n": 2859,
+      "single_class": false,
+      "flagged_share": 0.1717,
+      "f1": 87.25,
+      "recall": 90.39,
+      "fpr": 3.21
+    },
+    "Nazario": {
+      "n": 1565,
+      "single_class": true,
+      "flagged_share": 0.7457,
+      "f1": null,
+      "recall": 74.57,
+      "fpr": null
+    },
+    "Nigerian": {
+      "n": 3000,
+      "single_class": true,
+      "flagged_share": 0.9927,
+      "f1": null,
+      "recall": 99.27,
+      "fpr": null
+    },
+    "SpamAssassin": {
+      "n": 4718,
+      "single_class": false,
+      "flagged_share": 0.4095,
+      "f1": 90.08,
+      "recall": 95.69,
+      "fpr": 9.6
+    }
+  },
+  "exposure": {
+    "target": "Nazario",
+    "n_test": 521,
+    "by_k": {
+      "0": {
+        "target_accuracy": {
+          "mean": 71.85,
+          "ci95": 18.98,
+          "n": 3
+        },
+        "other_f1": {
+          "mean": 98.7,
+          "ci95": 0.41,
+          "n": 3
+        }
+      },
+      "10": {
+        "target_accuracy": {
+          "mean": 79.21,
+          "ci95": 15.53,
+          "n": 3
+        },
+        "other_f1": {
+          "mean": 98.7,
+          "ci95": 0.41,
+          "n": 3
+        }
+      },
+      "25": {
+        "target_accuracy": {
+          "mean": 90.02,
+          "ci95": 7.2,
+          "n": 3
+        },
+        "other_f1": {
+          "mean": 98.67,
+          "ci95": 0.45,
+          "n": 3
+        }
+      },
+      "50": {
+        "target_accuracy": {
+          "mean": 93.28,
+          "ci95": 6.45,
+          "n": 3
+        },
+        "other_f1": {
+          "mean": 98.67,
+          "ci95": 0.47,
+          "n": 3
+        }
+      },
+      "100": {
+        "target_accuracy": {
+          "mean": 96.42,
+          "ci95": 4.0,
+          "n": 3
+        },
+        "other_f1": {
+          "mean": 98.68,
+          "ci95": 0.37,
+          "n": 3
+        }
+      },
+      "250": {
+        "target_accuracy": {
+          "mean": 97.95,
+          "ci95": 1.53,
+          "n": 3
+        },
+        "other_f1": {
+          "mean": 98.63,
+          "ci95": 0.34,
+          "n": 3
+        }
+      },
+      "500": {
+        "target_accuracy": {
+          "mean": 98.59,
+          "ci95": 1.46,
+          "n": 3
+        },
+        "other_f1": {
+          "mean": 98.64,
+          "ci95": 0.33,
+          "n": 3
+        }
+      }
+    }
+  },
+  "warnings": [
+    "Single-class sources (label is fixed by source): Nazario, Nigerian. Any detector that recognises these sources gets their label for free.",
+    "Source alone gives F1 65.32 vs supervised 98.65: provenance does not explain the overall score (sources mostly contain both classes).",
+    "Sources are recognisable with class 1 held fixed (87.83% vs chance 16.67%): a provenance signal exists.",
+    "Sources are recognisable with class 0 held fixed (95.15% vs chance 25.0%): a provenance signal exists.",
+    "Leave-Nazario-out: 74.57% of Nazario is assigned the positive class by a model that never saw it.",
+    "Leave-Nigerian-out: 99.27% of Nigerian is assigned the positive class by a model that never saw it."
+  ]
+}
