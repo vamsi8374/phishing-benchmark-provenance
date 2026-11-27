@@ -1,0 +1,16 @@
+# Corpora are public but CC BY-SA 4.0 and large; they are not redistributed.
+# See dataset_builder/SETUP.md to rebuild them locally.
+*.csv
+*.mbox
+__pycache__/
+*.pyc
+.venv/
+venv/
+.DS_Store
+# LaTeX build artefacts
+*.aux
+*.log
+*.out
+*.bbl
+*.blg
+*.synctex.gz

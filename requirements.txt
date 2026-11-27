@@ -1,0 +1,8 @@
+# TF-IDF experiments. Reported results were reproduced with scikit-learn
+# 1.6.1 (macOS) and 1.7.2 (Linux); both give identical figures.
+scikit-learn>=1.4
+numpy>=1.24
+matplotlib>=3.7
+
+# Transformer experiment only (GPU; see colab_transformer/RUN_ON_COLAB.txt):
+#   torch, transformers, sentencepiece
