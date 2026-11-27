@@ -1,0 +1,38 @@
+TRANSFORMER CHECKS (reviewer Concern 3) - how to run on Google Colab
+
+1. Open colab.research.google.com -> New notebook.
+2. Runtime -> Change runtime type -> T4 GPU -> Save.
+3. Click the folder icon on the left, upload colab_transformer.zip.
+4. Run these cells, one per cell:
+
+   !unzip -q colab_transformer.zip
+   %cd colab_transformer
+   !pip install -q sentencepiece
+   !python transformer_checks.py
+
+5. When it finishes, download results/transformer_checks.json
+   and put it in phishcascade/results/.
+
+If Colab disconnects: upload + unzip again, upload your partial
+results/transformer_checks.json into colab_transformer/results/,
+and run the same command. Finished runs are skipped.
+
+If you see "non-finite logits": add  --no-fp16  to the command.
+
+To run one part at a time (e.g. to fit in a short session):
+   !python transformer_checks.py --part supervised
+   !python transformer_checks.py --part provenance
+   !python transformer_checks.py --part null
+
+Total = 15 fine-tuning runs (3 parts x 5 seeds).
+
+OVERLAP CONTROL (added 4 Nov 2026, needed for the DMLR version)
+The provenance detector's SpamAssassin training pool overlaps the benchmark
+test split. The TF-IDF control is done (97.83 disjoint vs 98.42 as reported);
+this repeats it for DeBERTa. 10 fine-tuning runs (provenance + null, 5 seeds):
+
+   !python transformer_checks.py --disjoint
+
+Download results/transformer_checks_disjoint.json and put it in
+phishcascade/results/. Expect the pool line to read 4091 -> 2605.
+Then tell Claude the two numbers it prints for provenance and null F1.
