@@ -1,0 +1,143 @@
+{
+  "title": "CEAS 2008 alone",
+  "n_rows": 6000,
+  "max_per_group": 3000,
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "datasheet": {
+    "CEAS": {
+      "file": "CEAS_08.csv",
+      "label_filter": null,
+      "class_1": {
+        "n": 21842,
+        "dated_share": 0.9988,
+        "year_min": 1998,
+        "year_max": 2020,
+        "year_p01": 2008,
+        "year_p99": 2008,
+        "top_years": [
+          [
+            2008,
+            21639
+          ],
+          [
+            2007,
+            37
+          ],
+          [
+            2002,
+            32
+          ]
+        ]
+      },
+      "class_0": {
+        "n": 17312,
+        "dated_share": 1.0,
+        "year_min": 2005,
+        "year_max": 2008,
+        "year_p01": 2008,
+        "year_p99": 2008,
+        "top_years": [
+          [
+            2008,
+            17308
+          ],
+          [
+            2005,
+            4
+          ]
+        ]
+      },
+      "licence": "not stated"
+    }
+  },
+  "alignment": {
+    "purity": {
+      "CEAS": 0.5578
+    },
+    "supervised": {
+      "f1": {
+        "mean": 99.39,
+        "ci95": 1.23,
+        "n": 3
+      },
+      "balanced_accuracy": {
+        "mean": 99.39,
+        "ci95": 1.21,
+        "n": 3
+      }
+    },
+    "source_oracle": {
+      "f1": {
+        "mean": 66.67,
+        "ci95": 0.0,
+        "n": 3
+      },
+      "balanced_accuracy": {
+        "mean": 50.0,
+        "ci95": 0.0,
+        "n": 3
+      }
+    }
+  },
+  "separability": {
+    "class_1": {
+      "note": "needs at least 2 sources with >= 400 class-1 emails; skipped"
+    },
+    "class_0": {
+      "note": "needs at least 2 sources with >= 400 class-0 emails; skipped"
+    }
+  },
+  "date": {
+    "dated_share": 0.999,
+    "overall": {
+      "n": 5994,
+      "balanced_accuracy": {
+        "mean": 50.17,
+        "ci95": 0.42,
+        "n": 3
+      },
+      "f1": {
+        "mean": 22.42,
+        "ci95": 92.21,
+        "n": 3
+      }
+    },
+    "within_source": {
+      "CEAS": {
+        "n": 5994,
+        "balanced_accuracy": {
+          "mean": 50.17,
+          "ci95": 0.42,
+          "n": 3
+        },
+        "f1": {
+          "mean": 22.42,
+          "ci95": 92.21,
+          "n": 3
+        }
+      }
+    },
+    "year_range_by_class": {
+      "0": [
+        2008,
+        2008
+      ],
+      "1": [
+        2008,
+        2008
+      ]
+    }
+  },
+  "loso": {
+    "CEAS": {
+      "note": "only one source; nothing to hold out"
+    }
+  },
+  "warnings": [
+    "Source alone gives F1 66.67 vs supervised 99.39: provenance does not explain the overall score (sources mostly contain both classes)."
+  ]
+}
