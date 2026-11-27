@@ -1,0 +1,59 @@
+{
+  "role_b_provenance_standin": {
+    "CEAS ham (original)": {
+      "transfer_f1": {
+        "mean": 0.9811486477152338,
+        "ci95": 0.0022956951550467766
+      },
+      "null_f1": {
+        "mean": 0.5119665387051869,
+        "ci95": 0.1280257362867345
+      }
+    },
+    "Ling ham (independent)": {
+      "transfer_f1": {
+        "mean": 0.3272611254472148,
+        "ci95": 0.027640256054543993
+      },
+      "null_f1": {
+        "mean": 0.5213446089727529,
+        "ci95": 0.13316020605893017
+      }
+    },
+    "Enron ham (independent)": {
+      "transfer_f1": {
+        "mean": 0.9569304183586332,
+        "ci95": 0.012073389615939886
+      },
+      "null_f1": {
+        "mean": 0.34768220484868106,
+        "ci95": 0.09213863052486296
+      }
+    }
+  },
+  "role_a_single_source_control": {
+    "CEAS 2008 (original)": {
+      "mean": 0.9853263051476866,
+      "ci95": 0.0032928334104669285
+    },
+    "Ling-Spam (independent)": {
+      "mean": 0.9936484864200523,
+      "ci95": 0.0019986530681067056
+    },
+    "Enron (independent)": {
+      "mean": 0.9772634633637033,
+      "ci95": 0.002103698709744528
+    }
+  },
+  "role_c_transfer_target": {
+    "CEAS 2008 (original)": 0.309022150189087,
+    "Ling-Spam (independent)": 0.14566929133858267,
+    "Enron (independent)": 0.41018644838562984
+  },
+  "R2_model_free_rule": {
+    "threshold_year": 2003,
+    "f1": 0.9995389580451821,
+    "parsed": 2169,
+    "n_test": 2170
+  }
+}

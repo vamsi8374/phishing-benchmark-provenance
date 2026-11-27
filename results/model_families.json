@@ -1,0 +1,38 @@
+{
+  "LogisticRegression": {
+    "full": 0.9981549815498154,
+    "body_only": 0.9963031423290203,
+    "date_only": 0.9990791896869246,
+    "domain_only": 0.8353891960867715
+  },
+  "LinearSVC (margin)": {
+    "full": 0.9986155976003691,
+    "body_only": 0.997690531177829,
+    "date_only": 1.0,
+    "domain_only": 0.8348936170212765
+  },
+  "ComplementNB (prob.)": {
+    "full": 0.9972324723247233,
+    "body_only": 0.993984266543267,
+    "date_only": 0.9940064545873674,
+    "domain_only": 0.759481961147086
+  },
+  "SGD hinge": {
+    "full": 0.9990774907749077,
+    "body_only": 0.997229916897507,
+    "date_only": 1.0,
+    "domain_only": 0.8465266558966075
+  },
+  "HistGradientBoosting": {
+    "full": 0.9967667436489608,
+    "body_only": 0.997229916897507,
+    "date_only": 0.9852125693160813,
+    "domain_only": 0.8502415458937198
+  },
+  "MLP (1x256, from scratch)": {
+    "full": 0.9972273567467653,
+    "body_only": 0.996299722479186,
+    "date_only": 0.9995389580451821,
+    "domain_only": 0.8458114123836502
+  }
+}

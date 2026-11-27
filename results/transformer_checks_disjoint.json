@@ -1,0 +1,30 @@
+{
+  "description": "DeBERTa-v3-small provenance-transfer test with the SpamAssassin-side training pool made disjoint from the benchmark dev and test splits (exact body match). Command: python transformer_checks.py --disjoint",
+  "provenance_of_these_numbers": "Per-seed F1 values as printed by transformer_checks.py to its run log, two decimals. Both Colab VMs were reclaimed before the results JSON could be copied off, so full-precision values and confusion matrices are not available. Run 2 is documented in the saved notebook Untitled7.ipynb (cells 3-7). The label-shuffled null part did not complete in either run and is not reported.",
+  "environment": {
+    "hardware": "Google Colab Pro, NVIDIA Tesla T4 (15360 MiB)",
+    "torch": "2.11.0+cu130",
+    "transformers": "5.22.0",
+    "bundle_md5": "b0fd8d7c953cc58cc77dac33f8a6e137",
+    "pool_line": "disjoint: SpamAssassin training pool 4091 -> 2605"
+  },
+  "config": {"model": "microsoft/deberta-v3-small", "epochs": 3.0, "bs": 16, "lr": 2e-05,
+             "max_len": 384, "seeds": [0, 1, 2, 3, 4], "n_per_side": 1500},
+  "reported_run_2": {
+    "date_utc": "2026-11-05",
+    "notebook": "Untitled7.ipynb",
+    "provenance_benchmark_f1_pct": {"per_seed": [97.08, 97.25, 97.56, 97.91, 97.20],
+                                    "mean": 97.40, "ci95_t": 0.42}
+  },
+  "replicate_run_1": {
+    "date_utc": "2026-11-05",
+    "notebook": "Untitled6.ipynb",
+    "provenance_benchmark_f1_pct": {"per_seed": [96.49, 97.04, 97.65, 97.82, 97.20],
+                                    "mean": 97.24, "ci95_t": 0.65}
+  },
+  "as_reported_for_comparison": {
+    "source": "results/transformer_checks.json (transformers 5.17.0, overlapping pool)",
+    "provenance_benchmark_f1_pct": {"mean": 97.84, "ci95_t": 0.51}
+  },
+  "null": "not completed"
+}

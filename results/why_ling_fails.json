@@ -1,0 +1,96 @@
+{
+  "size_vs_breadth": {
+    "Ling ham": {
+      "n_per_side": 1200,
+      "f1": {
+        "mean": 0.3272611254472148,
+        "ci95": 0.027640256054543993
+      }
+    },
+    "Enron ham, capped to Ling's n": {
+      "n_per_side": 1200,
+      "f1": {
+        "mean": 0.9569304183586332,
+        "ci95": 0.012073389615939886
+      }
+    },
+    "Enron ham, full budget": {
+      "n_per_side": 1200,
+      "f1": {
+        "mean": 0.9569304183586332,
+        "ci95": 0.012073389615939886
+      }
+    },
+    "CEAS ham, capped to Ling's n": {
+      "n_per_side": 1200,
+      "f1": {
+        "mean": 0.9811486477152338,
+        "ci95": 0.0022956951550467766
+      }
+    }
+  },
+  "breadth": {
+    "Ling ham": {
+      "n_docs": 2000,
+      "types": 45341,
+      "tokens": 815477,
+      "types_per_1k_tokens": 55.600587141022984
+    },
+    "Enron ham": {
+      "n_docs": 2000,
+      "types": 20078,
+      "tokens": 428873,
+      "types_per_1k_tokens": 46.815724002210445
+    },
+    "CEAS ham": {
+      "n_docs": 2000,
+      "types": 34542,
+      "tokens": 645544,
+      "types_per_1k_tokens": 53.5083588415352
+    },
+    "SpamAssassin ham": {
+      "n_docs": 2000,
+      "types": 35776,
+      "tokens": 566199,
+      "types_per_1k_tokens": 63.18626489979671
+    },
+    "Nazario phishing": {
+      "n_docs": 1551,
+      "types": 287002,
+      "tokens": 943790,
+      "types_per_1k_tokens": 304.0951906674154
+    }
+  },
+  "nazario_placement": {
+    "Ling ham": {
+      "pct_nazario_to_ham_side": {
+        "mean": 79.33333333333334,
+        "ci95": 2.426734569664542
+      },
+      "mean_abs_margin": {
+        "mean": 0.12351588207322177,
+        "ci95": 0.005515686829685095
+      }
+    },
+    "Enron ham": {
+      "pct_nazario_to_ham_side": {
+        "mean": 7.6,
+        "ci95": 2.358339677939379
+      },
+      "mean_abs_margin": {
+        "mean": 0.21729904895569074,
+        "ci95": 0.02059556935533732
+      }
+    },
+    "CEAS ham": {
+      "pct_nazario_to_ham_side": {
+        "mean": 0.17777777777777776,
+        "ci95": 0.20919720036839712
+      },
+      "mean_abs_margin": {
+        "mean": 0.285902603475662,
+        "ci95": 0.015270964859106792
+      }
+    }
+  }
+}
