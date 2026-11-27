@@ -1,0 +1,37 @@
+\begin{table}[t]
+\centering\small
+\caption{Source-exposure sweep and decomposition. A pooled model (CEAS,
+Ling-Spam and Enron; 3{,}716 messages whose positive class is spam) is trained
+with $k$ additional messages of the kind named in each column: $k$ per
+class from the benchmark's own training partition (``dev'', 465 per class),
+$k$ dev ham only, $k$ dev phishing only, or $k$ Nigerian fraud messages as
+positives. The last column trains on dev messages alone, without the pool.
+All models are scored on the unchanged benchmark test split ($n=2{,}170$),
+which shares no message body with dev or with the Nigerian sample. Values are
+$F_1$ (\%), mean $\pm$ 95\% Student-$t$ half-width over five seeds. The
+dev-only cell at $k=465$ has no interval because it uses the whole dev
+partition, so the seed does not change the training set.}
+\label{tab:source_exposure}
+\begin{tabular}{rccccc}
+\toprule
+ & \multicolumn{4}{c}{Pool (CEAS + Ling + Enron) plus $k$ per class of \ldots} & \\
+\cmidrule(lr){2-5}
+$k$ & both dev classes & dev ham only & dev phishing only & Nigerian fraud & dev only \\
+\midrule
+0 & 73.48\,$\pm$5.02 & --- & --- & --- & --- \\
+50 & 93.37\,$\pm$1.67 & 78.59\,$\pm$5.85 & 89.15\,$\pm$0.74 & 75.29\,$\pm$4.57 & 98.79\,$\pm$0.40 \\
+100 & 96.65\,$\pm$0.35 & 79.81\,$\pm$6.05 & 90.73\,$\pm$0.67 & 75.72\,$\pm$4.15 & 99.49\,$\pm$0.11 \\
+200 & 98.02\,$\pm$0.38 & 81.10\,$\pm$5.57 & 91.83\,$\pm$0.73 & 76.35\,$\pm$3.63 & 99.59\,$\pm$0.11 \\
+465 & 99.07\,$\pm$0.09 & 82.89\,$\pm$4.43 & 92.58\,$\pm$0.83 & 76.93\,$\pm$4.15 & 99.63\,$\pm$0.00 \\
+\midrule
+\multicolumn{6}{l}{Provenance-only detector (no phishing labels): 98.42\,$\pm$0.25} \\
+\midrule
+\multicolumn{6}{l}{\emph{Error split at $k=465$ (recall / false-positive rate, \%):}} \\
+\multicolumn{6}{l}{\quad both dev classes: 99.06 / 0.92} \\
+\multicolumn{6}{l}{\quad dev ham only: 71.67 / 1.07} \\
+\multicolumn{6}{l}{\quad dev phishing only: 99.00 / 14.88} \\
+\multicolumn{6}{l}{\quad Nigerian fraud: 72.65 / 16.02} \\
+\multicolumn{6}{l}{\quad pool only ($k=0$): 67.93 / 16.66} \\
+\bottomrule
+\end{tabular}
+\end{table}
